@@ -1,0 +1,8 @@
+{
+  "name": "Kronn",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
