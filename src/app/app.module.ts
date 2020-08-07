@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
+import { RouterModule } from '@angular/router'
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -11,11 +12,16 @@ import { AppComponent } from './app.component';
 //IMPORT THE PLUGINS
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
+import { ExploreContainerComponent } from './explore-container/explore-container.component';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, 
+    RouterModule.forRoot([
+      { path: '', component: ExploreContainerComponent}
+    ])
+    ],
   providers: [
     StatusBar,
     SplashScreen,

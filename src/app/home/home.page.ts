@@ -11,6 +11,7 @@ declare var google;
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
+
 export class HomePage implements OnInit {
   
   @ViewChild('map',  {static: false}) mapElementRef: ElementRef;
@@ -134,3 +135,4 @@ export class HomePage implements OnInit {
   }
   
 }
+
