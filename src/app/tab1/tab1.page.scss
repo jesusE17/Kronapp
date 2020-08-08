@@ -1,15 +1,44 @@
-.titles{
-    text-align:center;
-    font-size: 75px;
-    border-style:solid;
-    background-color: grey;
+#park{
+    width: max-content;
+    height: 10%;
+    margin-bottom: 10px;
 }
-.questions{
-    margin-top: 30px;
+#sport{
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#time{
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 0px;
+}
+#container{
+    position: relative;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 40%;
+    
+}
+#Joinbutton{
+    position: fixed;
+    bottom:20px;
+    border-width: medium;
     border: 2px solid grey;
+    border-radius: 10;
+    background-color: lightblue;
     border-radius:25px;
-    width: 100%;
+    width:30%;
+    height:20px;
     text-align: center;
-    height: 7%;
-    background-color: lightgrey;
+    margin-left: 35%;
+
+// }
+// #players{
+//     margin-top: 5px;
+//     margin-left: 50%;
+// }
+// #hostplayer{
+//     margin-top: 5px;
+// 
 }
