@@ -3,42 +3,82 @@
     height: 10%;
     margin-bottom: 10px;
 }
-#sport{
-    text-align: left;
-    margin-left: 10px;
-    margin-top: 10px;
+#location{
+    font-size: 30px;
+    font-weight: bold ;
+    text-align: center;
 }
-#time{
-    text-align: right;
-    margin-right: 10px;
+#address{
+    font-size: 20px;
+    text-align: center;
+    color: lightgray;
     margin-top: 0px;
 }
-#container{
-    position: relative;
-    border: 2px solid black;
-    border-radius: 10px;
-    height: 40%;
+// #line{
+//     color:"yellow";
+//     width: 75%;
+//     margin-left:25%;
+//     // height: 10px;
+//     // background-color: "yellow";
+
+// }
+#sport{
+    margin-left: 20px;
+}
+#time{
+   margin-left: 55%;
+   padding-top: 0px;
+}
+#leftcontainer{
+    display: inline-flex;
+    border: 1px solid lightgreen;
+    border-radius: 10px 0px 0px 10px;
+    width:49%;
+    height: 30%;
+    
+}
+#rightcontainer{
+    display: inline-flex;
+    border: 1px solid lightgreen;
+    border-radius: 0px 10px 10px 0px;
+    height:30%;
+    width:49%;
+    border-left: 0px;
     
 }
 #Joinbutton{
     position: fixed;
-    bottom:20px;
-    border-width: medium;
-    border: 2px solid grey;
+    bottom:0px;
+    border-width: thin ;
     border-radius: 10;
-    background-color: lightblue;
-    border-radius:25px;
-    width:30%;
-    height:20px;
+    background-color: darkgoldenrod;
+    border-radius:5px;
+    width:50%;
+    height:40px;
     text-align: center;
-    margin-left: 35%;
-
-// }
-// #players{
-//     margin-top: 5px;
-//     margin-left: 50%;
-// }
-// #hostplayer{
-//     margin-top: 5px;
-// 
+    margin-left: 25%;
+    font-size: 30px;
+    color: white;
 }
+.icon{
+    height: 20px;
+    width: 20px;
+}
+#player{
+    margin-top: 10%;
+    padding-left: 10px;
+    font-size: 15px;
+}
+#host{
+    margin-top: 10%;
+    padding-left: 10px;
+    font-size: 15px;
+}
+#hostheader{
+    padding-left:60px;
+}
+#playerheader{
+    padding-left:50px;
+}
+
+
