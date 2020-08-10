@@ -5,8 +5,16 @@
     </ion-button>  
       <img  id= "park" src = "../../assets/96815186-outdoor-basketball-court.jpg">
   </div> 
-  <ion-input class = "questions">Location <img src="../../assets/icon/favicon.png" class = "icon"> </ion-input>
-  <ion-input class = "questions">Sport <img src="../../assets/icon/favicon.png" class = "icon"></ion-input>
+  <input class = "questions" placeholder="Location"> 
+  <img id = "searchglass" src="../../assets/icon/ei_search (1).png"> 
+    <ion-item class = "questions">
+    <ion-label>Sport</ion-label>
+    <ion-select value="soccer" ok-text="Okay" cancel-text="Dismiss">
+      <ion-select-option value="soccer">Soccer</ion-select-option>
+      <ion-select-option value="blonde">Basketball</ion-select-option>
+    </ion-select>
+  </ion-item>
+
   
   <div id= "leftcontainer">
       <h1 id ="hostheader"> Host </h1>
@@ -26,8 +34,7 @@
     </body>
     </div>
   <div id="Hostbutton"> Host</div>
-  <ion-input class = "questions">Time <img src="../../assets/icon/favicon.png" class = "icon"></ion-input>
-
+ <input class = "questions" placeholder="Date/Time" padding-top = 15px> 
     
   
 
