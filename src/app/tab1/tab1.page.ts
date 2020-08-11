@@ -2,7 +2,7 @@
 import { Component, OnInit, ViewChild, ElementRef, NgZone } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder, NativeGeocoderResult, NativeGeocoderOptions } from '@ionic-native/native-geocoder/ngx';
-
+import { IonPullUpFooterState } from 'ionic-pullup';
 declare var google;
 
 @Component({
@@ -13,6 +13,8 @@ declare var google;
 
 export class Tab1Page implements OnInit {
   
+  footerState: IonPullUpFooterState;
+
   @ViewChild('map',  {static: false}) mapElementRef: ElementRef;
   map: any;
   address:string;
@@ -33,11 +35,43 @@ export class Tab1Page implements OnInit {
     this.GoogleAutocomplete = new google.maps.places.AutocompleteService();
     this.autocomplete = { input: '' };
     this.autocompleteItems = [];
+    this.footerState = IonPullUpFooterState.Collapsed;
+
+  }
+  //pull-up
+  footerExpanded() {
+    console.log('Footer expanded!');
+  }
+
+  footerCollapsed() {
+    console.log('Footer collapsed!');
+  }
+
+  toggleFooter() {
+    this.footerState = this.footerState == IonPullUpFooterState.Collapsed ? IonPullUpFooterState.Expanded : IonPullUpFooterState.Collapsed;
+  }
+  //load markers
+  initMap(){
+    var myLatLng = { lat: 34.0091807, lng: -118.2475735 };
+
+    var mapOptions = {
+      zoom: 4,
+      center: myLatLng
+    }
+   
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+    var marker = new google.maps.Marker({
+    position: myLatLng,
+    title:"Hello World!"
+    });
+      
+    marker.setMap(map);
   }
  
   //LOAD THE MAP ONINIT.
   ngOnInit() {
-    this.loadMap();    
+    this.loadMap();   
   }
 
   //LOADING THE MAP HAS 2 PARTS.
