@@ -1,63 +1,28 @@
-.questions{
-    border:0px solid lightgreen;
-    border-bottom: 1px solid lightgreen;
-    height: 5% ;
-    width: 50%;
-    margin-left: 25%;
-    margin-bottom: 5px;
+#Friendstitle{
+    border-bottom: 1px solid #5BAA68;
 }
-#leftcontainer{
-    display: inline-flex;
-    border: 1px solid lightgreen;
-    border-radius: 10px 0px 0px 10px;
-    width:50%;
-    height: 25%;
-    
+#titleicon{
+    position: absolute;
+    top:27px;
+    left: 40px;
+    height: 50px;
+    width: 50px;
 }
-#rightcontainer{
-    display: inline-flex;
-    border: 1px solid lightgreen;
-    border-radius: 0px 10px 10px 0px;
-    height:25%;
-    width:50%;
-    border-left: 0px;
-    
-}
-#Hostbutton{
-    position: fixed;
-    bottom:0px;
-    border-width: thin ;
-    border-radius: 10;
-    background-color: darkgoldenrod;
-    border-radius:5px;
-    width:50%;
-    height:40px;
+#title{
     text-align: center;
-    margin-left: 25%;
-    font-size: 30px;
-    color: white;
+    font-size: 50px;
 }
 .icon{
-    height: 20px;
-    width: 20px;
+    left: 400px;
 }
-#player{
-    margin-top: 10%;
-    padding-left: 10px;
-    font-size: 15px;
+.rightarrow{
+    left: 30px;
 }
-#host{
-    margin-top: 10%;
-    padding-left: 10px;
-    font-size: 15px;
+#Friends{
+    border-bottom: 1px solid #5BAA68;
 }
-#hostheader{
-    padding-left:60px;
-}
-#playerheader{
-    padding-left:50px;
-}
-#searchglass{
-    height: 20px;
-    width: 20px;
+#friend{
+    font-size: 30px;
+    text-align: center;
+    vertical-align: middle;
 }

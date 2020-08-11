@@ -50,28 +50,10 @@ export class Tab1Page implements OnInit {
   toggleFooter() {
     this.footerState = this.footerState == IonPullUpFooterState.Collapsed ? IonPullUpFooterState.Expanded : IonPullUpFooterState.Collapsed;
   }
-  //load markers
-  initMap(){
-    var myLatLng = { lat: 34.0091807, lng: -118.2475735 };
-
-    var mapOptions = {
-      zoom: 4,
-      center: myLatLng
-    }
-   
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-    var marker = new google.maps.Marker({
-    position: myLatLng,
-    title:"Hello World!"
-    });
-      
-    marker.setMap(map);
-  }
- 
-  //LOAD THE MAP ONINIT.
+ //LOAD THE MAP ONINIT.
   ngOnInit() {
-    this.loadMap();   
+    this.loadMap(); 
+    
   }
 
   //LOADING THE MAP HAS 2 PARTS.
@@ -89,11 +71,25 @@ export class Tab1Page implements OnInit {
       //LOAD THE MAP WITH THE PREVIOUS VALUES AS PARAMETERS.
       this.getAddressFromCoords(resp.coords.latitude, resp.coords.longitude); 
       this.map = new google.maps.Map(this.mapElementRef.nativeElement, mapOptions); 
+      console.log("map", this.map);
       this.map.addListener('tilesloaded', () => {
         console.log('accuracy',this.map, this.map.center.lat());
         this.getAddressFromCoords(this.map.center.lat(), this.map.center.lng())
         this.lat = this.map.center.lat()
         this.long = this.map.center.lng()
+        var myLatLng = { lat: 34.0091807, lng: -118.2475735 };
+
+    var mapOptions = {
+      zoom: 15,
+      center: myLatLng
+    }
+
+    var marker = new google.maps.Marker({
+    position: myLatLng,
+    title:"Hello World!"
+    });
+    marker.setMap(this.map);
+    marker.addListener('click', () => {document.getElementById("popup").style.visibility = "visible";});
       }); 
     }).catch((error) => {
       console.log('Error getting location', error);
@@ -105,7 +101,7 @@ export class Tab1Page implements OnInit {
     console.log("getAddressFromCoords "+lattitude+" "+longitude);
     let options: NativeGeocoderOptions = {
       useLocale: true,
-      maxResults: 5    
+      maxResults: 5   
     }; 
     this.nativeGeocoder.reverseGeocode(lattitude, longitude, options)
       .then((result: NativeGeocoderResult[]) => {
@@ -162,4 +158,5 @@ export class Tab1Page implements OnInit {
   }
   
 }
+
 

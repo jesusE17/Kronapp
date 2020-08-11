@@ -11,7 +11,7 @@
       <div #map id="map"  style="height: 100%;"></div>
     </div>   
    
-
+<div id= "popup" >
 <lib-ionic-pullup (onExpand)="footerExpanded()" (onCollapse)="footerCollapsed()" [(state)]="footerState" [toolbarTopMargin]="100" [minBottomVisible]="200">
 
   <ion-toolbar color="light" (click)="toggleFooter()" #ionDragFooter>
@@ -20,20 +20,22 @@
   </ion-toolbar>
   <ion-content>        
     <h1 id= "location">Hugh National Park</h1>
-    <h2 id="address"> <img height=10px width =10px src="../../assets/icon/Group (1).png">
+    <h2 id="address"> <img height=10px width =10px src="../../assets/icon/Group (3).png">
       3577 Saint Jone ave.</h2>
     <body>
       <div class = "game">
-        <p id="title"><img height=10px width =10px src="../../assets/icon/favicon.png">Soccer Match - Hosted by:Julio Cortez <button routerLink="/home"><img height=10px width =10px src="../../assets/icon/Farrow.png"> </button></p>
+        <p id="title"><img height=10px width =10px src="../../assets/icon/Group (2).png">Soccer Match - Hosted by:Julio Cortez <button routerLink="/home"><img height=10px width =10px src="../../assets/icon/Group (4).png"> </button></p>
         <p class = "status">Currently Playing</p>
       </div>
       <div class = "game">
-        <p id="title"><img height=10px width =10px src="../../assets/icon/favicon.png">Soccer Match - Hosted by:Sam Glizen </p>
+        <p id="title"><img height=10px width =10px src="../../assets/icon/Group (2).png">Soccer Match - Hosted by:Sam Glizen  <button routerLink="/home"><img height=10px width =10px src="../../assets/icon/Group (4).png"> </button> </p>
         <p class = "status">Reserverd for 2:30</p>
       </div>
+      <div id="Createbutton" routerLink="/host"> Create Game</div>
     </body>
   </ion-content>
   </lib-ionic-pullup>
+  </div>
   <button type="button" class="btn btn-outline-secondary mr-2" placement="Top"
   ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle="Popover on bottom">
 Popover on bottom

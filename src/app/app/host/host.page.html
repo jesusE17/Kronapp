@@ -1,0 +1,43 @@
+<ion-content >
+  <div>
+   <ion-button routerLink="/tabs/tab1" size ="small" id= "backbutton">
+      <ion-icon name="arrow-undo-circle-outline"></ion-icon>  
+    </ion-button>  
+      <img  id= "park" src = "../../assets/icon/soccerfield.png">
+  </div> 
+  <input class = "questions" placeholder="Location"> 
+  <img id = "searchglass" src="../../assets/icon/search.png"> 
+    <ion-item class = "questions">
+    <ion-label>Sport</ion-label>
+    <ion-select value="soccer" ok-text="Okay" cancel-text="Dismiss">
+      <ion-select-option value="soccer">Soccer</ion-select-option>
+      <ion-select-option value="blonde">Basketball</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  
+  <div id= "leftcontainer">
+      <h1 id ="hostheader"> Host </h1>
+      <body id= "host">
+        <p>
+          <img src="../../assets/icon/Group (2).png" class = "icon">Jaden
+        </p>
+      </body>
+    </div>
+        <!-- List of players  -->
+    <div  id ="rightcontainer">
+      <h1 id="playerheader"> Players</h1>
+      <body id= "player">
+        <p>
+         <img src="../../assets/icon/Group (5).png" class = "icon">add player
+        </p>
+    </body>
+    </div>
+  <div id="Hostbutton" routerLink="/tabs/tab1"> Host</div>
+ <input class = "questions" placeholder="Date/Time" padding-top = 15px> 
+    
+  
+
+
+
+</ion-content>

@@ -50,4 +50,21 @@
 .status{
   color: lightgreen;
 }
+#popup{
+  visibility: hidden;
+}
+#Createbutton{
+  position: relative;
+  top:10px;
+  border-width: thin ;
+  border-radius: 10;
+  background-color: #F3C82D;
+  border-radius:5px;
+  width:50%;
+  height:40px;
+  text-align: center;
+  margin-left: 25%;
+  font-size: 30px;
+  color: white;
+}
 
