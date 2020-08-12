@@ -86,7 +86,8 @@ export class Tab1Page implements OnInit {
 
     var marker = new google.maps.Marker({
     position: myLatLng,
-    title:"Hello World!"
+    title:"Hello World!",
+    icon: "../../assets/icon/Soccer Pin.png"
     });
     marker.setMap(this.map);
     marker.addListener('click', () => {document.getElementById("popup").style.visibility = "visible";});
